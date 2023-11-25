@@ -412,7 +412,7 @@ textarea{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 8rem 3rem 5rem 3rem;
+        padding: 10rem 3rem 5rem 3rem;
     } 
     .secondary-container{
         margin: 5rem auto;
