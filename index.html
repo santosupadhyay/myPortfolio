@@ -153,7 +153,7 @@
 
 
 
-    <div class="quaternary-container container" id="blogs">
+    <div class="quaternary-container container" id="blogs" onscroll="reveal()">
         <div class="first-blog blogs">
             <img src="./images/blogs.jpeg" alt="" class="blog-image">
             <div class="blog-description">
@@ -181,7 +181,7 @@
 
 
 
-    <div class="final-container container" id="contact">
+    <div class="final-container container" id="contact" onscroll="reveal()">
         <div class="leftside-contact">
             <div class="send-us-message">
                 <div class="name">
@@ -214,8 +214,12 @@
 
 
     <script>
+        document.getElementsByClassName("tertiary-container").onscroll = function() {myFunction()};
         
-    </script>
+        function myFunction() {
+          document.getElementsByClassName("projects-first").style.background = "red";
+        }
+        </script>
 </body>
 
 </html>
