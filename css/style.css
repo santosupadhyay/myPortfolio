@@ -150,12 +150,32 @@ ul a:hover {
   padding: 2rem 1rem;
   gap: 1rem;
 }
+.secondary-container:hover{
+  .about-me-photo{
+    animation: fadeleft 1.6s linear;
+  }
+  .rightside-description p{
+    animation: faderight 2s linear;
+  }
+  .github-icon {
+    animation: second 2s;
+  }
+  .linkedin-icon {
+    animation: third 2s;
+  }
+  .facebook-icon {
+    animation: second 2s;
+  }
+  .instagram-icon {
+    animation: third 2s;
+  }
+}
 .about-me-photo {
   height: auto;
   width: 100%;
   border-radius: 50%;
   background-color: var(--tertiary-color);
-  animation: fadeleft 1.6s linear;
+  
 }
 
 .rightside-description {
@@ -165,8 +185,7 @@ ul a:hover {
 }
 .rightside-description p {
   font-size: 1rem;
-  animation: faderight 2s;
-  animation-timing-function: linear;
+  
 }
 
 
@@ -183,21 +202,6 @@ ul a:hover {
   color: black;
   border-radius: 50%;
 }
-
-.github-icon {
-  animation: second 2s;
-}
-.linkedin-icon {
-  animation: third 2s;
-}
-.facebook-icon {
-  animation: second 2s;
-}
-.instagram-icon {
-  animation: third 2s;
-}
-
-
 .read-more {
   margin-top: -1rem;
   animation: none;
@@ -220,6 +224,17 @@ ul a:hover {
   padding: 2rem 1rem;
   text-align: justify;
 }
+.tertiary-container:hover{
+
+  .projects-first {
+    animation: slideFromRight 2s linear;
+  }
+  .projects-second {
+    animation: slide 2s linear;
+  }
+}
+  
+
 
 /* ProjectImage Styling */
 .project-image {
@@ -238,12 +253,7 @@ ul a:hover {
   transform: scale(1.05);
   opacity: 0.75;
 }
-.projects-first {
-  animation: slideFromRight 2s linear;
-}
-.projects-second {
-  animation: slide 2s linear;
-}
+
 .tertiary-container p {
   font-size: 0.9rem;
 }
@@ -256,6 +266,14 @@ ul a:hover {
   max-width: 90%;
   margin: 5rem auto;
 }
+.quaternary-container:hover{
+  .first-blog {
+    animation: slideFromRight 2s linear;
+  }
+  .third-blog {
+    animation: slide 2s linear;
+  }
+}
 .blogs {
   background-color: var(--secondary-color);
   border-radius: 20px;
@@ -266,12 +284,7 @@ ul a:hover {
   transform: scale(1.05);
   opacity: 0.75;
 }
-.first-blog {
-  animation: slideFromRight 2s linear;
-}
-.third-blog {
-  animation: slide 2s linear;
-}
+
 .blog-image {
   height: auto;
   width: 100%;
@@ -288,6 +301,11 @@ ul a:hover {
   background-color: var(--secondary-color);
   padding: 2rem 3rem;
   border-radius: 20px;
+}
+.final-container:hover{
+  .image{
+    animation: boom 2s linear;
+  }
 }
 
 input {
@@ -320,7 +338,6 @@ textarea {
 }
 .image {
   height: auto;
-  animation: boom 2s linear;
   width: 100%;
 }
 
