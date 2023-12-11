@@ -47,7 +47,7 @@ span:hover {
   cursor: default;
 }
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Styling */
@@ -150,25 +150,23 @@ ul a:hover {
   padding: 2rem 1rem;
   gap: 1rem;
 }
-.secondary-container:hover{
-  .about-me-photo{
-    animation: fadeleft 1.6s linear;
-  }
-  .rightside-description p{
-    animation: faderight 2s linear;
-  }
-  .github-icon {
-    animation: second 2s;
-  }
-  .linkedin-icon {
-    animation: third 2s;
-  }
-  .facebook-icon {
-    animation: second 2s;
-  }
-  .instagram-icon {
-    animation: third 2s;
-  }
+.about-me-photo{
+  animation: fadeleft 1.6s linear;
+}
+.rightside-description p{
+  animation: faderight 2s linear;
+}
+.github-icon {
+  animation: second 2s;
+}
+.linkedin-icon {
+  animation: third 2s;
+}
+.facebook-icon {
+  animation: second 2s;
+}
+.instagram-icon {
+  animation: third 2s;
 }
 .about-me-photo {
   height: auto;
@@ -224,14 +222,11 @@ ul a:hover {
   padding: 2rem 1rem;
   text-align: justify;
 }
-.tertiary-container:hover{
-
-  .projects-first {
-    animation: slideFromRight 2s linear;
-  }
-  .projects-second {
-    animation: slide 2s linear;
-  }
+.projects-first {
+  animation: slideFromRight 2s linear;
+}
+.projects-second {
+  animation: slide 2s linear;
 }
   
 
@@ -266,23 +261,39 @@ ul a:hover {
   max-width: 90%;
   margin: 5rem auto;
 }
-.quaternary-container:hover{
-  .first-blog {
-    animation: slideFromRight 2s linear;
-  }
-  .third-blog {
-    animation: slide 2s linear;
-  }
+.first-blog {
+  animation: slide 2s linear;
+}
+.third-blog {
+  animation: slideFromRight 2s linear;
 }
 .blogs {
   background-color: var(--secondary-color);
   border-radius: 20px;
+  opacity: 1;
   padding: 2rem 1rem;
   transition: ease-in-out 0.5s;
+  position: relative;
 }
 .blogs:hover {
-  transform: scale(1.05);
-  opacity: 0.75;
+  transform: translateY(-10px);
+  opacity: 0.2;
+}
+.blogs:hover .blog-btn{
+  opacity: 1;
+}
+.blogs:hover .blog-button{
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.readmore{
+  animation: none;
 }
 
 .blog-image {
@@ -302,10 +313,8 @@ ul a:hover {
   padding: 2rem 3rem;
   border-radius: 20px;
 }
-.final-container:hover{
-  .image{
-    animation: boom 2s linear;
-  }
+.image{
+  animation: boom 2s linear;
 }
 
 input {
@@ -351,6 +360,12 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+.blog-btn{
+  opacity: 0;
+}
+.blog-button{
+  display: none;
+}
 
 
 
@@ -360,7 +375,7 @@ textarea {
 
 @keyframes slide {
   0% {
-    transform: translateX(200%);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
@@ -368,7 +383,7 @@ textarea {
 }
 @keyframes slideFromRight {
   0% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);
