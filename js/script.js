@@ -1,25 +1,14 @@
-const mainMenu = document.querySelector('.mainMenu');
-const closeMenu = document.querySelector('.closeMenu');
-const openMenu = document.querySelector('.openMenu');
-const menu_items = document.querySelectorAll('nav .mainMenu li a');
+const containerEl = document.querySelector('.container');
+
+const headerEl = document.querySelector('.header');
 
 
-
-
-openMenu.addEventListener('click',show);
-closeMenu.addEventListener('click',close);
-
-// close menu when you click on a menu item 
-menu_items.forEach(item => {
-    item.addEventListener('click',function(){
-        close();
-    })
+window.addEventListener('scroll', () => {
+    console.log(window.scrollY)
+   if(window.scrollY > containerEl.offsetTop - headerEl.offsetHeight - 50){
+        containerEl.classList.add('active');
+   }else{
+    containerEl.classList.remove('active');
+   }
 })
 
-function show(){
-    mainMenu.style.display = 'flex';
-    mainMenu.style.top = '0';
-}
-function close(){
-    mainMenu.style.top = '-100%';
-}

@@ -90,6 +90,7 @@ ul a:hover {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  justify-content: space-around;
   padding: 5rem 3rem;
 }
 
@@ -802,4 +803,9 @@ textarea {
     height: auto;
     width: 100%;
   }
+}
+
+
+.container .active{
+  transition: all .5s;
 }
